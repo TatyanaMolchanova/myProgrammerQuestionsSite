@@ -16,6 +16,11 @@ import {SharedModule} from "./shared/shared.module";
 import {AuthInterceptor} from "./shared/auth.interceptor";
 import { environment } from '../environments/environment';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HtmlPageComponent } from './html-page/html-page.component';
+import { CssPageComponent } from './css-page/css-page.component';
+import { JavascriptPageComponent } from './javascript-page/javascript-page.component';
+import { AngularPageComponent } from './angular-page/angular-page.component';
+import { PhpPageComponent } from './php-page/php-page.component';
 
 
 registerLocaleData(ruLocale, 'ru')
@@ -32,7 +37,12 @@ const INTERCEPTOR_PROVIDER: Provider = {
     MainLayoutComponent,
     HomePageComponent,
     PostPageComponent,
-    PostComponent
+    PostComponent,
+    HtmlPageComponent,
+    CssPageComponent,
+    JavascriptPageComponent,
+    AngularPageComponent,
+    PhpPageComponent
   ],
   imports: [
     BrowserModule,

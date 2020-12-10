@@ -1,19 +1,35 @@
-<!--<header class="header">-->
-
-<mat-toolbar color="primary">
+<mat-toolbar class="header" color="primary">
     <div class="container header-wrap">
         <div class="logo">
-            <a href="http://getitanswers.com/" class="white">getItAnswers.com</a>
+            <a routerLink="/" class="white">getItAnswers.com</a>
         </div>
         <div class="motto">
             Helper in HTML, CSS, JavaScript
         </div>
     </div>
-
 </mat-toolbar>
 
-
-<!--</header>-->
+<mat-toolbar class="menu" color="primary">
+    <div class="container">
+        <ul>
+            <li routerLinkActive="active">
+                <a [routerLink]="['/', 'html']">HTML</a>
+            </li>
+            <li routerLinkActive="active">
+                <a [routerLink]="['/', 'css']">CSS</a>
+            </li>
+            <li routerLinkActive="active">
+                <a [routerLink]="['/', 'javascript']">JavaScript</a>
+            </li>
+            <li routerLinkActive="active">
+                <a [routerLink]="['/', 'angular']">Angular</a>
+            </li>
+            <li routerLinkActive="active">
+                <a [routerLink]="['/', 'php']">PHP</a>
+            </li>
+        </ul>
+    </div>
+</mat-toolbar>
 
 <div class="container">
     <router-outlet></router-outlet>
