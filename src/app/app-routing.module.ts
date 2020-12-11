@@ -8,6 +8,7 @@ import {CssPageComponent} from './css-page/css-page.component';
 import {JavascriptPageComponent} from './javascript-page/javascript-page.component';
 import {AngularPageComponent} from './angular-page/angular-page.component';
 import {PhpPageComponent} from './php-page/php-page.component';
+import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
     {
@@ -19,7 +20,8 @@ const routes: Routes = [
             {path: 'css', component: CssPageComponent},
             {path: 'javascript', component: JavascriptPageComponent},
             {path: 'angular', component: AngularPageComponent},
-            {path: 'php', component: PhpPageComponent}
+            {path: 'php', component: PhpPageComponent},
+            {path: '**', component: PageNotFoundComponent}
         ]
     },
     {

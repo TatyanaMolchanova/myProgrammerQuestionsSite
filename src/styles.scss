@@ -208,6 +208,7 @@ img {
   display: block;
   color: #888;
   margin-bottom: .8rem;
+  margin-top: 1.8rem;
 
   &.invalid {
     color: var(--primary-color);
@@ -320,4 +321,27 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .header, .menu {
   height: 45px;
+}
+
+.navbar a {
+  color: #fff;
+  margin-right: 20px;
+}
+
+.navbar ul {
+  padding-bottom: 10px;
+  display: flex;
+}
+
+.navbar h1 {
+  padding-top: 10px;
+}
+
+.page-not-found {
+  padding-top: 100px;
+  text-align: center;
+}
+
+.page-not-found h1 {
+  font-size: 45px;
 }
