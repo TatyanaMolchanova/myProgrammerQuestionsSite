@@ -21,12 +21,15 @@ const routes: Routes = [
             {path: 'javascript', component: JavascriptPageComponent},
             {path: 'angular', component: AngularPageComponent},
             {path: 'php', component: PhpPageComponent},
-            {path: '**', component: PageNotFoundComponent}
+            // {path: '**', component: PageNotFoundComponent}
         ]
     },
     {
         // path: 'admin', loadChildren: './admin/admin.module#AdminModule'
         path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)
+    },
+    {
+        path: '**', component: PageNotFoundComponent
     }
 ];
 
