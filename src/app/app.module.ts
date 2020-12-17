@@ -22,6 +22,7 @@ import { JavascriptPageComponent } from './javascript-page/javascript-page.compo
 import { AngularPageComponent } from './angular-page/angular-page.component';
 import { PhpPageComponent } from './php-page/php-page.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { CategoryPageComponent } from './category-page/category-page.component';
 
 
 registerLocaleData(ruLocale, 'ru')
@@ -44,7 +45,8 @@ const INTERCEPTOR_PROVIDER: Provider = {
     JavascriptPageComponent,
     AngularPageComponent,
     PhpPageComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    CategoryPageComponent
   ],
   imports: [
     BrowserModule,

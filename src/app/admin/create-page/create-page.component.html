@@ -38,6 +38,14 @@
         </div>
     </div>
 
+    <div class="form-control">
+        <label for="rubrics">Раздел:</label>
+        <select formControlName="rubric" id="rubrics">
+            <option value="" disabled>Выберите рубрику:</option>
+            <option *ngFor="let rubric of rubrics"  [ngValue]="rubric">{{rubric}}</option>
+        </select>
+    </div>
+
     <button
         type="submit"
         class="btn btn-block btn-dark"

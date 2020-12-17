@@ -13,6 +13,7 @@ import {AuthGuard} from "./shared/services/auth.guard";
 import {SearchPipe} from "./shared/search.pipe";
 import { AlertComponent } from './shared/components/alert/alert.component';
 import {AlertService} from "./shared/services/alert.service";
+import { AddCategoryPageComponent } from './add-category-page/add-category-page.component';
 
 @NgModule({
     declarations: [
@@ -22,7 +23,8 @@ import {AlertService} from "./shared/services/alert.service";
         CreatePageComponent,
         EditPageComponent,
         SearchPipe,
-        AlertComponent
+        AlertComponent,
+        AddCategoryPageComponent
     ],
     imports: [
         CommonModule,
@@ -36,7 +38,8 @@ import {AlertService} from "./shared/services/alert.service";
                     {path: 'login', component: LoginPageComponent},
                     {path: 'dashboard', component: DashboardPageComponent, canActivate: [AuthGuard]},
                     {path: 'create', component: CreatePageComponent, canActivate: [AuthGuard]},
-                    {path: 'post/:id/edit', component: EditPageComponent, canActivate: [AuthGuard]}
+                    {path: 'post/:id/edit', component: EditPageComponent, canActivate: [AuthGuard]},
+                    {path: 'add-category', component: AddCategoryPageComponent, canActivate: [AuthGuard]}
                 ]
             }
         ])

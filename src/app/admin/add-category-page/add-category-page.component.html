@@ -1,0 +1,50 @@
+<form [formGroup]="formCategory" (ngSubmit)="submitCategory()">
+    <h1>Добавление новой категории</h1>
+
+    <div
+            class="form-control"
+            [ngClass]="{invalid: formCategory.get('category').touched && formCategory.get('category').invalid}"
+    >
+        <label for="category">Название новой категории:</label>
+        <input id="category" type="text" formControlName="category">
+        <div
+                *ngIf="formCategory.get('category').touched && formCategory.get('category').invalid"
+                class="validation"
+        >
+            <small *ngIf="formCategory.get('category').errors.required">
+                Введите название категории
+            </small>
+        </div>
+    </div>
+
+    <div
+            class="form-control"
+            [ngClass]="{invalid: formCategory.get('weight').touched && formCategory.get('weight').invalid}"
+    >
+        <label for="weight">Вес категории (для порядка отображения):</label>
+        <br>
+        <input class="weight" id="weight" type="number" formControlName="weight">
+        <div
+                *ngIf="formCategory.get('weight').touched && formCategory.get('weight').invalid"
+                class="validation"
+        >
+            <small *ngIf="formCategory.get('weight').errors.required">
+                Введите вес категории
+            </small>
+        </div>
+    </div>
+
+    <div class="form-control">
+        <label for="rubrics">Существующие категории</label>
+        <select formControlName="rubric" id="rubrics">
+            <option value="" disabled>Выберите рубрику:</option>
+            <option *ngFor="let rubric of rubrics"  [ngValue]="rubric">{{rubric}}</option>
+        </select>
+    </div>
+
+    <button
+            type="submit"
+            class="btn btn-block btn-dark"
+            [disabled]="formCategory.invalid"
+    >Добавить категорию</button>
+</form>

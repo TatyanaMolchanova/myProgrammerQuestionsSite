@@ -14,9 +14,16 @@ export interface Post {
     title: string
     text: string
     author: string
-    date: Date
+    date: Date,
+    rubric: any
 }
 
 export interface FbCreateResponse {
     name: string
+}
+
+export interface Category {
+    id?: string
+    category: string
+    weight: number
 }

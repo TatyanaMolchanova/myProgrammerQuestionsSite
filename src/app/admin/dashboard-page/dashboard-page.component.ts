@@ -25,6 +25,10 @@ export class DashboardPageComponent implements OnInit, OnDestroy {
     this.pSub = this.postsService.getAll().subscribe(posts => {
       this.posts = posts;
     })
+
+    // this.pSub = this.postsService.getCategory().subscribe(posts => {
+    //       this.posts = posts;
+    //   })
   }
 
   remove(id: string) {

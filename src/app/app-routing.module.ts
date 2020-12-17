@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
-import {Routes, RouterModule, PreloadAllModules} from '@angular/router';
+import {NgModule, OnInit} from '@angular/core';
+import {Routes, RouterModule, PreloadAllModules, Router} from '@angular/router';
 import { MainLayoutComponent} from './shared/components/main-layout/main-layout.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { PostPageComponent } from './post-page/post-page.component';
@@ -39,4 +39,12 @@ const routes: Routes = [
   })],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
+
+// export class AppRoutingModule implements OnInit {
+//     constructor(private router: Router) { }
+//
+//     ngOnInit() {
+//         console.log('this.router', this.router.url)
+//     }
+// }
